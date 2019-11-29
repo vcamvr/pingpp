@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/url"
 
-	pingpp "github.com/pingplusplus/pingpp-go/pingpp"
+	pingpp "github.com/lyphilip/pingpp"
 )
 
 type Client struct {
