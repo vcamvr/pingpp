@@ -38,6 +38,7 @@ var (
 	httpClient        = &http.Client{Timeout: defaultHTTPTimeout}
 	backends          Backends
 	AccountPrivateKey string
+	PingppPublicKey   string
 	OsInfo            string
 )
 
