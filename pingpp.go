@@ -35,7 +35,8 @@ var (
 	LogLevel = 2
 
 	//不用默认的defaultClient，自定义httpClient
-	httpClient        = &http.Client{Timeout: defaultHTTPTimeout}
+	httpClient = &http.Client{Timeout: defaultHTTPTimeout}
+
 	backends          Backends
 	AccountPrivateKey string
 	PingppPublicKey   string
@@ -54,10 +55,10 @@ func Version() string {
 	return "3.2.1"
 }
 
-/*2016-02-16 当前情况下没有代码调用了该函数
+/*2016-02-16 当前情况下没有代码调用了该函数*/
 func SetHttpClient(client *http.Client) {
 	httpClient = client
-}*/
+}
 
 type Backends struct {
 	API Backend
