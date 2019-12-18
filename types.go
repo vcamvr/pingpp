@@ -855,6 +855,7 @@ type (
 		ServiceApp        string                 `json:"service_app,omitempty"`
 		RoyaltyUsers      []RoyaltyUser          `json:"royalty_users,omitempty"`
 		RoyaltyTemplate   string                 `json:"royalty_template,omitempty"`
+		BalanceSettlement map[string]interface{} `json:"balance_settlement"`
 	}
 	// RoyaltyUser 分润用户
 	RoyaltyUser struct {
