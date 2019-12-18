@@ -54,10 +54,10 @@ func Version() string {
 	return "3.2.1"
 }
 
-/*2016-02-16 当前情况下没有代码调用了该函数
+/*2016-02-16 当前情况下没有代码调用了该函数*/
 func SetHttpClient(client *http.Client) {
 	httpClient = client
-}*/
+}
 
 type Backends struct {
 	API Backend
