@@ -800,7 +800,7 @@ type (
 		Object              string                 `json:"object"`
 		App                 string                 `json:"app"`
 		Actual_amount       *int64                 `json:"actual_amount"`
-		Coupon_template     map[string]interface{} `json:"coupon_template"`
+		Coupon_template     CouponTmpl             `json:"coupon_template"`
 		Created             int64                  `json:"created"`
 		Livemode            bool                   `json:"livemode"`
 		Metadata            map[string]interface{} `json:"metadata"`
