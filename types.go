@@ -752,23 +752,24 @@ type (
 
 type (
 	CouponTmpl struct {
-		ID                   string                 `json:"id"`
-		Object               string                 `json:"object"`
-		App                  string                 `json:"app"`
-		Amount_available     int64                  `json:"amount_available"`
-		Amount_off           *int64                 `json:"amount_off"`
-		Created              int64                  `json:"created"`
-		Expiration           map[string]interface{} `json:"expiration"`
-		Livemode             bool                   `json:"livemode"`
-		Max_circulation      *int64                 `json:"max_circulation"`
-		Max_user_circulation *int64                 `json:"max_user_circulation"`
-		Metadata             map[string]interface{} `json:"metadata"`
-		Name                 string                 `json:"name"`
-		Percent_off          *int64                 `json:"percent_off"`
-		Refundable           bool                   `json:"refundable"`
-		Times_circulated     int64                  `json:"times_circulated"`
-		Times_redeemed       int64                  `json:"times_redeemed"`
-		Type                 int64                  `json:"type"`
+		ID                    string                 `json:"id"`
+		Object                string                 `json:"object"`
+		App                   string                 `json:"app"`
+		Amount_available      int64                  `json:"amount_available"`
+		Amount_off            *int64                 `json:"amount_off"`
+		Created               int64                  `json:"created"`
+		Expiration            map[string]interface{} `json:"expiration"`
+		Livemode              bool                   `json:"livemode"`
+		Max_circulation       *int64                 `json:"max_circulation"`
+		Max_user_circulation  *int64                 `json:"max_user_circulation"`
+		Metadata              map[string]interface{} `json:"metadata"`
+		Name                  string                 `json:"name"`
+		Percent_off           *int64                 `json:"percent_off"`
+		Discount_amount_limit *int64                 `json:"discount_amount_limit"`
+		Refundable            bool                   `json:"refundable"`
+		Times_circulated      int64                  `json:"times_circulated"`
+		Times_redeemed        int64                  `json:"times_redeemed"`
+		Type                  int64                  `json:"type"`
 	}
 
 	CouponTmplParams struct {
