@@ -870,6 +870,7 @@ type (
 		Extra           map[string]interface{} `json:"extra,omitempty"`
 		TimeExpire      int64                  `json:"time_expire,omitempty"` // 时间戳
 		Charge_order_no string                 `json:"charge_order_no,omitempty"`
+		Combined_with   map[string]interface{} `json:"combined_with,omitempty"`
 	}
 
 	// Order 数据类型
