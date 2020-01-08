@@ -1153,13 +1153,14 @@ type (
 	}
 
 	RechargeCharge struct {
-		Amount     int    `json:"amount"`
-		Channel    string `json:"channel"`
-		OrderNo    string `json:"order_no"`
-		Subject    string `json:"subject"`
-		Body       string `json:"body"`
-		TimeExpire int64  `json:"time_expire,omitempty"`
-		ClientIp   string `json:"client_ip,omitempty"`
+		Amount     int                    `json:"amount"`
+		Channel    string                 `json:"channel"`
+		OrderNo    string                 `json:"order_no"`
+		Subject    string                 `json:"subject"`
+		Body       string                 `json:"body"`
+		TimeExpire int64                  `json:"time_expire,omitempty"`
+		ClientIp   string                 `json:"client_ip,omitempty"`
+		Extra      map[string]interface{} `json:"extra,omitempty"`
 	}
 	RechargeBonus struct {
 		Amount int `json:"amount,omitempty"`
