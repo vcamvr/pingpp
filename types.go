@@ -812,6 +812,7 @@ type (
 		Time_start          *int64                 `json:"time_start"`
 		User                string                 `json:"user"`
 		Valid               bool                   `json:"valid"`
+		Expired             bool                   `json:"expired"`
 	}
 
 	CouponParams struct {
