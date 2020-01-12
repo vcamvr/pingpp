@@ -773,15 +773,16 @@ type (
 	}
 
 	CouponTmplParams struct {
-		Name             string                 `json:"name,omitempty"`
-		Type             int64                  `json:"type"`
-		Amount_off       int64                  `json:"amount_off,omitempty"`
-		Percent_off      int64                  `json:"percent_off,omitempty"`
-		Amount_available int64                  `json:"amount_available,omitempty"`
-		Max_circulation  *int64                 `json:"max_circulation,omitempty"`
-		Metadata         map[string]interface{} `json:"metadata,omitempty"`
-		Expiration       map[string]interface{} `json:"expiration,omitempty"`
-		Refundable       *bool                  `json:"refundable,omitempty"`
+		Name                 string                 `json:"name,omitempty"`
+		Type                 int64                  `json:"type"`
+		Amount_off           int64                  `json:"amount_off,omitempty"`
+		Percent_off          int64                  `json:"percent_off,omitempty"`
+		Amount_available     int64                  `json:"amount_available,omitempty"`
+		Max_circulation      *int64                 `json:"max_circulation,omitempty"`
+		Max_user_circulation *int64                 `json:"max_user_circulation,omitempty"`
+		Metadata             map[string]interface{} `json:"metadata,omitempty"`
+		Expiration           map[string]interface{} `json:"expiration,omitempty"`
+		Refundable           *bool                  `json:"refundable,omitempty"`
 	}
 
 	CouponTmplUpdateParams struct {
