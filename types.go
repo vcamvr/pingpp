@@ -813,6 +813,9 @@ type (
 		Time_start          *int64                 `json:"time_start"`
 		User                string                 `json:"user"`
 		Valid               bool                   `json:"valid"`
+
+		//Indicate if can be used on current pay amount
+		Applicable bool `json:"applicable"`
 	}
 
 	CouponParams struct {
