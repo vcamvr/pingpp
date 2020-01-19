@@ -770,6 +770,9 @@ type (
 		Times_circulated      int64                  `json:"times_circulated"`
 		Times_redeemed        int64                  `json:"times_redeemed"`
 		Type                  int64                  `json:"type"`
+
+		//coupon rule name
+		CouponRuleName string `json:"coupon_rule_name"`
 	}
 
 	CouponTmplParams struct {
@@ -815,8 +818,7 @@ type (
 		Valid               bool                   `json:"valid"`
 
 		//Indicate if can be used on current pay amount
-		Applicable     bool   `json:"applicable"`
-		CouponRuleName string `json:"coupon_rule_name"`
+		Applicable bool `json:"applicable"`
 	}
 
 	CouponParams struct {
