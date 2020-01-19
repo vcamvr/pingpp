@@ -815,7 +815,8 @@ type (
 		Valid               bool                   `json:"valid"`
 
 		//Indicate if can be used on current pay amount
-		Applicable bool `json:"applicable"`
+		Applicable     bool   `json:"applicable"`
+		CouponRuleName string `json:"coupon_rule_name"`
 	}
 
 	CouponParams struct {
