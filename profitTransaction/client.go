@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/lyphilip/pingpp"
+	"github.com/vcamvr/pingpp"
 )
 
 // Client 分账明细客户端

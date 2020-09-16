@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	pingpp "github.com/lyphilip/pingpp"
+	pingpp "github.com/vcamvr/pingpp"
 )
 
 type Client struct {

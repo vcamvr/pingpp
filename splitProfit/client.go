@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/lyphilip/pingpp"
+	"github.com/vcamvr/pingpp"
 )
 
 // Client 分账客户端

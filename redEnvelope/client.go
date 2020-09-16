@@ -1,7 +1,7 @@
 package redEnvelope
 
 import (
-	pingpp "github.com/lyphilip/pingpp"
+	pingpp "github.com/vcamvr/pingpp"
 	"log"
 	"net/url"
 	"strconv"

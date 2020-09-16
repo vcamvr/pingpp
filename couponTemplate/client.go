@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/lyphilip/pingpp"
+	"github.com/vcamvr/pingpp"
 )
 
 const (

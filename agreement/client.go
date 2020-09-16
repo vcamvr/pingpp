@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/url"
 
-	pingpp "github.com/lyphilip/pingpp"
+	pingpp "github.com/vcamvr/pingpp"
 )
 
 // Client 请求

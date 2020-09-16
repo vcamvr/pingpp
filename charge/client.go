@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	pingpp "github.com/lyphilip/pingpp"
+	pingpp "github.com/vcamvr/pingpp"
 )
 
 type Client struct {
