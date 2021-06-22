@@ -2,6 +2,7 @@ package pingpp
 
 import (
 	"bytes"
+	"context"
 	"encoding/base64"
 	"errors"
 	"fmt"
@@ -54,7 +55,9 @@ func (s *ApiBackend) NewRequest(method, path, key, contentType string, body io.R
 		path = "/" + path
 	}
 	path = s.URL + path
-	req, err := http.NewRequest(method, path, body)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	req, err := http.NewRequestWithContext(ctx, method, path, body)
 	if LogLevel > 2 {
 		log.Printf("Request to pingpp is : \n %v\n", req)
 	}
