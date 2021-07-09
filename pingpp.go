@@ -7,18 +7,15 @@ import (
 	"os/exec"
 	"runtime"
 	"strings"
-	"time"
 )
 
 const (
 	// 当前版本的api地址
 	apiBase = "https://api.pingxx.com/v1"
 	// 当前版本的api生成生成时间
-	apiVersion = "2017-06-30"
-	// httpclient等待时间
-	defaultHTTPTimeout                  = 80 * time.Second
-	TotalBackends                       = 1
-	APIBackend         SupportedBackend = "api"
+	apiVersion                     = "2017-06-30"
+	TotalBackends                  = 1
+	APIBackend    SupportedBackend = "api"
 )
 
 var (
@@ -34,8 +31,7 @@ var (
 	// 3: errors + informational + debug
 	LogLevel = 2
 
-	//不用默认的defaultClient，自定义httpClient
-	httpClient        = &http.Client{Timeout: defaultHTTPTimeout}
+	httpClient        = http.DefaultClient
 	backends          Backends
 	AccountPrivateKey string
 	PingppPublicKey   string
