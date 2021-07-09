@@ -36,7 +36,10 @@ func (s ApiBackend) Call(method, path, key string, form *url.Values, params []by
 		}
 	}
 
-	req, err := s.NewRequest(method, path, key, "application/json", body, params)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	req, err := s.NewRequest(ctx, method, path, key, "application/json", body, params)
 
 	if err != nil {
 		return err
@@ -50,13 +53,11 @@ func (s ApiBackend) Call(method, path, key string, form *url.Values, params []by
 }
 
 // NewRequest 建立http请求对象
-func (s *ApiBackend) NewRequest(method, path, key, contentType string, body io.Reader, params []byte) (*http.Request, error) {
+func (s *ApiBackend) NewRequest(ctx context.Context, method, path, key, contentType string, body io.Reader, params []byte) (*http.Request, error) {
 	if !strings.HasPrefix(path, "/") {
 		path = "/" + path
 	}
 	path = s.URL + path
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, method, path, body)
 	if LogLevel > 2 {
 		log.Printf("Request to pingpp is : \n %v\n", req)
